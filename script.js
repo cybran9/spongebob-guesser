@@ -86,10 +86,11 @@ function checkGuess() {
     setTimeout(newEpisode, 2000);
 
   } else {
-    document.getElementById("message").textContent = "Nope! Try again.";
+    
     // ❌ Incorrect guess → move to next frame
     currentFrame++;
-
+    
+    document.getElementById("message").textContent = "Nope! Try again.";
     if (currentFrame < 4) {
       // If frames are left, show the next one
       showFrame();
@@ -108,4 +109,5 @@ function checkGuess() {
 // 6️⃣ Start the game when page loads
 // ----------------------------
 window.onload = newEpisode;
+
 
